@@ -1,0 +1,1 @@
+1. Run ```pnpm install && pnpm start```

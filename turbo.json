@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "dependsOn": ["^backend", "^frontend"],
+      "outputs": []
+    },
+    "backend": {
+      "cache": false,
+      "dependsOn": ["^dev"]
+    },
+    "frontend": {
+      "cache": false,
+      "dependsOn": ["^dev"]
+    },
+    "lint": {
+      "cache": true,
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": ["^test"],
+      "outputs": []
+    },
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    }
+  }
+}
