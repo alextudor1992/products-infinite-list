@@ -1,1 +1,1 @@
-1. Run ```pnpm install && pnpm start```
+1. Run ```pnpm install && pnpm dev```
